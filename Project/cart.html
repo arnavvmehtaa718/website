@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Cyber-Punk</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Your Cart</h1>
+        <div id="cart-items" class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <h3>Total: $<span id="total-price">0</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="text-center">
+                <p>&copy; 2025 Cybersecurity Courses. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.onload = function() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const cartItemsContainer = document.getElementById("cart-items");
+            const totalPriceElement = document.getElementById("total-price");
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                totalPrice += item.price * item.quantity;
+                const itemElement = document.createElement("div");
+                itemElement.classList.add("col-md-12", "mb-3");
+                itemElement.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5>${item.name}</h5>
+                            <p>Price: $${item.price}</p>
+                            <p>Quantity: ${item.quantity}</p>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <h5>Total: $${item.price * item.quantity}</h5>
+                        </div>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+        };
+    </script>
+</body>
+</html>

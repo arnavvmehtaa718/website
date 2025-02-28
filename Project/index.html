@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber-punk</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Cyber-Punk</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-white" style="background-color: #343a40;">
+        <div class="container">
+            <h1 class="display-4">Welcome to the Cyber-Punk Store</h1>
+            <p class="lead">Enhance your skills and knowledge in cybersecurity with our comprehensive courses.</p>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1>Available Courses</h1>
+        <div class="row" id="course-list">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="download.jpg" class="card-img-top" alt="Penetration Tester">
+                    <div class="card-body">
+                        <h5 class="card-title">Penetration Tester</h5>
+                        <p class="card-text">Evaluates a system's security and attackability.</p>
+                        <button class="btn btn-primary add-to-cart" data-id="1" data-name="Penetration Tester" data-price="100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="download (1).jpg" class="card-img-top" alt="Digital Forensics">
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Forensics</h5>
+                        <p class="card-text">Find and evaluate digital evidence.</p>
+                        <button class="btn btn-primary add-to-cart" data-id="2" data-name="Digital Forensics" data-price="120">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="cloud.jpeg" class="card-img-top" alt="Cloud Security">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Security</h5>
+                        <p class="card-text">Set of policies, technologies, and controls utilized to protect data.</p>
+                        <button class="btn btn-primary add-to-cart" data-id="3" data-name="Cloud Security" data-price="150">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="incident.jpg" class="card-img-top" alt="Incident Response">
+                    <div class="card-body">
+                        <h5 class="card-title">Incident Response</h5>
+                        <p class="card-text">Organizations develop plans to respond to and recover from security breaches.</p>
+                        <button class="btn btn-primary add-to-cart" data-id="4" data-name="Incident Response" data-price="130">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="additional-courses">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="red teaming.jpg" class="card-img-top" alt="Red Teaming">
+                    <div class="card-body">
+                        <h5 class="card-title">Red Teaming</h5>
+                        <p class="card-text">Advanced evasion techniques and tactics.</p>
+                        <button class="btn btn-primary add-to-cart" data-id="5" data-name="Red Teaming" data-price="140">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="defensive.jpg" class="card-img-top" alt="Defensive Security">
+                    <div class="card-body">
+                        <h5 class="card-title">Defensive Security</h5>
+                        <p class="card-text">A proactive approach to protect an organization’s assets from potential threats.</p>
+                        <button class="btn btn-primary add-to-cart" data-id="6" data-name="Defensive Security" data-price="110">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="va.jpg" class="card-img-top" alt="VAPT">
+                    <div class="card-body">
+                        <h5 class="card-title">VAPT</h5>
+                        <p class="card-text">Identifying security vulnerabilities of an organization and securing them.</p>
+                        <button class="btn btn-primary add-to-cart" data-id="7" data-name="VAPT" data-price="160">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="network.png" class="card-img-top" alt="Network Security">
+                    <div class="card-body">
+                        <h5 class="card-title">Network Security</h5>
+                        <p class="card-text">Evaluate the security of an entire network and secure it.</p>
+                        <button class="btn btn-primary add-to-cart" data-id="8" data-name="Network Security" data-price="125">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Cybersecurity Courses offers the best courses to enhance your skills and knowledge in the field of cybersecurity. Learn from experts and become proficient in defending against cyber threats.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: support@cybersecuritycourses.com</li>
+                        <li>Phone: +91 834567890</li>
+                        <li>Address: 123 Cyber Street, Tech City, USA</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">LinkedIn</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p>&copy; 2025 Cyber-Punk. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        function addToCart(event) {
+            const button = event.target;
+            const productId = button.getAttribute("data-id");
+            const productName = button.getAttribute("data-name");
+            const productPrice = button.getAttribute("data-price");
+
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            const existingProductIndex = cart.findIndex(item => item.id === productId);
+
+            if (existingProductIndex > -1) {
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert(`${productName} added to cart!`);
+        }
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+    </script>
+</body>
+</html>
